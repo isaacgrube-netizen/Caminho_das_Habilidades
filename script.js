@@ -8,4 +8,16 @@ const desafios = [
 
 function iniciarDesafio(){
     const name=document.getElementById("name")
-}f
+
+    if (name === ""){
+        alert("Por favor, digite um nome para continuar");
+        return;
+    }
+
+    const numero = Math.floor(Math.random()*desafios.length)
+    const desafio = desafios[numero];
+
+    document.getElementById("resultado").innerHTML =
+    "<h2>"Olá, ${name}"</h2>"
+    "<p> Seu desafio é: ${desafio} </p>"
+}
