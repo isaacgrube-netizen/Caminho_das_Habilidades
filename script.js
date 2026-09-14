@@ -37,5 +37,43 @@ function iniciarDesafio(){
 
     <button onclick="avaliarResposta()">Enviar projeto!</button>
     `
+    function avaliarResposta(){
+        const nome = document.getElementById("nome").value;
+        const resposta = document.getElementById("resposta").value;
+        const textoDesafio = document.querySelector("#resultado h3")
+
+        if (resposta.trim() === ""){
+            alert("Por favor, digite o seu projeto para continuar.")
+            return;
+        }
+        let pontos = 0;
+        if(resposta.length >= 30){
+            pontos += 30;
+        }
+        const texto = resposta.toLowerCase();
+        if( texto.includes("praticar")||
+            texto.includes("criar")||
+            texto.includes("pesquisar")
+            ){
+                pontos += 35;
+            }
+        if(texto.includes("analisar")||
+        texto.includes("aprender")
+        ){pontos += 35;}
+
+        let nível;
+
+    if(pontos >= 70){
+    nível= "Inventor de Idéias";
+    }
+
+    else if (pontos >= 65){
+        nível = "Desenvolvedor";
+    }
+
+    else{
+        nível = "Explorador";
+    }
+    }
 }
 
