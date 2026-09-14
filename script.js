@@ -18,6 +18,19 @@ function iniciarDesafio(){
     const desafio = desafios[numero];
 
     document.getElementById("resultado").innerHTML =
-    "<h2>Olá, ${name}</h2>"
-    "<p> Seu desafio é: ${desafio} </p>"
+    `<h2>Olá, ${name}</h2>
+    <p> Seu desafio é: </p>
+    <p>${desafio} </p>
+    
+    <label for = "resposta">
+     Qual é o projeto para este desafio?
+    </label>
+
+    <textarea
+    id = "resposta"
+    rows = "5"
+    cols = "40"
+    placeholder = "Digite aqui seu projeto">
+    </textarea>
+    `
 }
