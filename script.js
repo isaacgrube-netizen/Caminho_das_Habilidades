@@ -7,9 +7,9 @@ const desafios = [
 ];
 
 function iniciarDesafio(){
-    const name=document.getElementById("name")
+    const nome=document.getElementById("nome")
 
-    if (name === ""){
+    if (nome === ""){
         alert("Por favor, digite um nome para continuar");
         return;
     }
@@ -18,7 +18,7 @@ function iniciarDesafio(){
     const desafio = desafios[numero];
 
     document.getElementById("resultado").innerHTML =
-    `<h2>Olá, ${name}</h2>
+    `<h2>Olá, ${nome}</h2>
     <p> Seu desafio é: </p>
     <p>${desafio} </p>
     
@@ -32,5 +32,10 @@ function iniciarDesafio(){
     cols = "40"
     placeholder = "Digite aqui seu projeto">
     </textarea>
+
+    <br><br>
+
+    <button onclick="avaliarResposta()">Enviar projeto!</button>
     `
 }
+
